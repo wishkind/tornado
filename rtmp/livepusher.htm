@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <br />
+    <div id="pusher"
+         style="width:300px;height:400px;background-color:#000000;margin:auto"></div>
+    <br />
+    <div style="text-align:center; margin:auto;">
+      <input id="path"
+             type="text"
+             value=""
+             placeholder="请输入直播服务器地址(rtmp)" />
+      <button id="pp"
+              v-on:click="ppPusher()">开始</button>
+    </div>
+    <div class="button"
+         v-on:click="switchCamera()">切换摄像头</div>
+  </div>
+</template>
