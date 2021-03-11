@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片浏览</title>
+<!-- 'content-type' : 'application/x-www-form-urlencoded'
+问题：http post请求网页会出现405
+
+原因： Apache、IIS、Nginx等绝大多数web服务器，都不允许静态文件响应POST请求
+
+解决：将post请求改为get请求-->
+</head>
+<body>
+
+    <div align="center">
+        <br><br>
+    <img src="{{static_url('images/%s' % img_src)}}" style="width:100;height:44"/>
+        <form action='/' method='post'>
+            rename: <input type="text" name="rename" /><br>
+            imgname: <input type="text" name="imgname" value="{{imgname}}"/><br>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+
+</body>
+</html>
